@@ -66,11 +66,6 @@
             android:background="@android:color/holo_orange_light"
             android:text="SignIn"
             android:textColor="@android:color/background_light" />
-        <!--android:textAlignment="center"-->
-        <!--android:textColor="@android:color/holo_orange_dark"-->
-        <!--android:textSize="?android:attr/textAppearanceMedium"-->
-        <!--android:textStyle="italic" />-->
-
 
     </LinearLayout>
 
