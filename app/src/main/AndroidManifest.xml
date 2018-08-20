@@ -4,10 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_munshi"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,7 +20,10 @@
         <activity android:name=".Home" />
         <activity android:name=".Signin" />
         <activity android:name=".Bills" />
-        <activity android:name=".Speech_items"></activity>
+        <activity android:name=".Speech_items" />
+        <activity android:name=".Unlisted_Barcode" />
+        <activity android:name=".Validation"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>

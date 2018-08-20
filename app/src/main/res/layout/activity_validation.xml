@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Validation">
+
+
+    <TextView
+        android:id="@+id/barcode_title"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="21dp"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/barcode_title">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/barcode_title">
+
+            <EditText
+                android:id="@+id/name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/barcode_title"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusedByDefault="true"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_value"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Price"
+                android:inputType="number"
+                android:padding="10dp"
+
+                />
+
+            <EditText
+                android:id="@+id/packet_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price_value"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Packet Price"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <ListView
+                android:id="@+id/kirana_validate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="5"
+                android:background="#2fd6e2"
+                android:scrollbars="vertical"
+                tools:ignore="ExtraText" />
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+
+    <Button
+        android:id="@+id/button_validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scroll_buttons"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="#ffffff"
+        android:text="Validate" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="insideInset"
+        android:id="@+id/scroll_buttons"
+        android:layout_alignParentBottom="true"
+        >
+    <LinearLayout
+        android:id="@+id/price_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        />
+
+
+    </ScrollView>
+</RelativeLayout>

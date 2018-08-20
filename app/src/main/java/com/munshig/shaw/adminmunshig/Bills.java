@@ -113,6 +113,8 @@ public class Bills extends AppCompatActivity{
             public void onEvent(final QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                 for(DocumentChange doc : documentSnapshots.getDocumentChanges()){
                     path = doc.getDocument().getId();
+
+
                     firestore.collection("Users/"+path+"/Bills").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {

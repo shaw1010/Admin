@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="100dp"
+    android:layout_marginBottom="40dp"
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="30dp"
     android:background="@drawable/layout_bg"
     android:orientation="vertical"
     tools:context=".Home">
@@ -16,7 +16,7 @@
         android:id="@+id/user_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="Select User"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
@@ -25,10 +25,10 @@
         android:id="@+id/user_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:padding="10dp"
         android:backgroundTint="@color/colorPrimaryDark"/>
 
@@ -36,7 +36,7 @@
         android:id="@+id/bills_home_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:background="@android:color/holo_orange_dark"
@@ -48,10 +48,9 @@
         android:id="@+id/barcode_home_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
         android:background="@android:color/background_light"
         android:padding="10dp"
         android:text="Barcode"
@@ -59,15 +58,31 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/unlisted_barcodes_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#ffffff"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Unlisted Barcodes"
+        />
+
+    <Button
         android:id="@+id/speech_home_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
         android:background="@android:color/holo_green_dark"
         android:padding="10dp"
         android:text="Speech Items"
         android:textColor="@android:color/background_light" />
+
+
 </LinearLayout>

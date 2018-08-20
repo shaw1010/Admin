@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,9 +50,12 @@ public class Signin extends AppCompatActivity {
 
 
                 if(let_me_check(name,pass,re_pass)){
+                    Log.i("let_me_check: ", String.valueOf(let_me_check(name,pass,re_pass)));
+
                     Toast.makeText(Signin.this, "Finally!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Signin.this, MainActivity.class));
                 }
+
             }
         });
 
@@ -60,22 +64,26 @@ public class Signin extends AppCompatActivity {
     }
 
     public boolean let_me_check(String name, String pass, String re_pass){
-        if(!pass.equals(re_pass) || name.isEmpty() || pass.isEmpty()){
+        if(!pass.equals(re_pass) || name.isEmpty() || pass.isEmpty() || pass.length() < 5){
             if(!pass.equals(re_pass)) {
-                sign_retype_password_edit.setError("Bhai chand raat ko nikalta hai");
+                sign_retype_password_edit.setError("Chand raat ko nikalta hai");
                 sign_retype_password_edit.requestFocus();
             }
             if(name.isEmpty()){
-                signin_username_edittext.setError("Bhai tu kaun hai? Jadoo?");
+                signin_username_edittext.setError("Tu kaun hai? Jadoo?");
                 sign_retype_password_edit.requestFocus();
             }
             if(pass.isEmpty()){
                 signin_password_edittext.setError("Password Speed post karun!");
                 signin_password_edittext.requestFocus();
             }
+            if(pass.length() < 5){
+                signin_password_edittext.setError("Tumse naa ho Paayega!");
+                signin_password_edittext.requestFocus();
+            }
         }
         else{return true;}
-        return  false;
+        return false;
     }
 
 }
